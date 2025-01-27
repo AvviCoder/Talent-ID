@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #ffffff; */
+    padding: 15px 30px;
+    border-radius: 15px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
+    margin: 20px auto;
+    width: 90vw; /* Make the header responsive */
+  }
+
+  .header-bg {
+    padding: 30px 20px;
+    background-color: #baaad3; /* Same purple background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 1000px; /* Set a max width for better responsiveness */
+    margin: auto;
+    margin-top: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add depth with shadow */
+  }
+
+ .logo img{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    object-fit: contain; 
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Increased spacing between nav items */
+    margin: 0; /* Remove extra margin */
+    padding: 0;
+    align-items: center;
+  }
+
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600; /* Semi-bold for prominence */
+    transition: all 0.3s ease-in-out; /* Smooth hover animation */
+    padding: 10px 15px;
+    border-radius: 5px; /* Subtle rounded corners */
+  }
+
+.nav li{
+    font-weight: 500;
+}
+#middle {
+  margin-right: 50px;
+}
+
+.nav a:hover {
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  /* Login Button */
+  #login a {
+    color: white;
+  }
+
+  #login {
+    background-color: #623b99; /* Same purple shade */
+    color: red;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+  }
+
+  #login:hover {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Highlight hover with shadow */
+  }
+  #login a:hover {
+    color: black;
+  }
+
+
+#demo {
+  background-color: white; /* Light purple shade */
+  color: #333; /* Contrast text */
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Demo Button Hover */
+#demo:hover {
+  background-color: #2b1b44; /* Darker purple */
+  color: white;
+  transform: scale(1.1); /* Zoom in slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-bg {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  #login,
+  #demo {
+    margin: 10px 0;
+  }
+}
+
+/* Content */
+
+.content{
+  max-width: 1000px;
+  /* text-align: center; */
+  margin: auto;
+}
+
+.content p{
+  font-size: large;
+}
+
+.content li{
+  font-size: large;
+}
+
+#heading{
+  text-align: center;
+}
+
+
+
+/* Footer section */
+/* Footer Section */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 7px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+.footer-bottom span {
+    color: red;
+}

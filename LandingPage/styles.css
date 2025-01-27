@@ -1,0 +1,567 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+}
+
+body {
+    /* background-color: #5b3591; */
+    background-color: #603998;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 90%;
+    /* Make the header responsive */
+}
+
+/* Header Background Section */
+.header-bg {
+    padding: 17px 20px;
+    background-color: #dcadd8;
+    /* Same purple background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 900px;
+    /* Set a max width for better responsiveness */
+    margin: auto;
+    margin-top: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Add depth with shadow */
+}
+
+/* Logo */
+.logo img {
+    width: 150px;
+    height: 50px;
+    object-fit: contain;
+    /* Ensures the image scales proportionally */
+}
+
+/* Navigation List */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#middle {
+    margin-right: 130px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 17px;
+    /* Increased spacing between nav items */
+    margin: 0;
+    /* Remove extra margin */
+    padding: 0;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    /* Semi-bold for prominence */
+    transition: all 0.3s ease-in-out;
+    /* Smooth hover animation */
+    padding: 10px 15px;
+    border-radius: 5px;
+    /* Subtle rounded corners */
+}
+
+
+.nav a:hover {
+    /* color:#d486cd;  */
+    transform: scale(1.1);
+}
+
+/* Login Button */
+#login {
+    background-color: #7a53b2;
+    /* Same purple shade */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add a shadow for depth */
+}
+
+/* Login Button Hover */
+#login:hover {
+    background-color: white;
+    color: rgb(95, 85, 159);
+    /* Swap text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Highlight hover with shadow */
+}
+
+/* Demo Button */
+#demo {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+}
+
+/* Demo Button Hover */
+#demo:hover {
+    background-color: rgb(135, 136, 170);
+    /* Darker purple */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-bg {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    #login,
+    #demo {
+        margin: 10px 0;
+    }
+}
+
+/* Intro-Section Begins */
+.introSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro-heading {
+    color: white;
+    font-size: 3.5rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+.introSection p {
+    color: white;
+    font-size: larger;
+    margin-top: 25px;
+}
+
+.introSection button {
+    padding: 10px 25px;
+    border-radius: 40px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: 600;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.introSection button:hover {
+    background-color: #24074c;
+    color: white;
+}
+
+
+
+.introSection img {
+    height: 400px;
+    margin-top: 50px;
+}
+
+/* blank */
+.blank {
+    height: 50px;
+    background-color: white;
+}
+
+.blank2 {
+    height: 300px;
+    background-color: #5b3591;
+}
+
+/* USECASE SECTION */
+/* 
+.useCaseContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e5e0fa;
+    z-index: 100;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ffffff;
+    color: #6b46c1;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar button.active,
+.sidebar button:hover {
+    background-color: #6b46c1;
+    color: #ffffff;
+}
+
+/* Content Styling */
+.content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text h2 {
+    font-size: 24px;
+    color: #6b46c1;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* decision Section */
+.decision-section {
+    background-color: white;
+}
+
+.decision-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    gap: 2rem;
+    background-color: white;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+/* Left Section (Image) Styling */
+.left img {
+    width: 100%;
+    max-width: 500px;
+    /* Limits the image size */
+    height: auto;
+    display: block;
+}
+
+/* Right Section (Text) Styling */
+.right {
+    max-width: 600px;
+    /* Restricts text width */
+}
+
+.right h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.right p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+    /* Aligns the text evenly on both sides */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .decision-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left img {
+        margin-bottom: 1rem;
+    }
+
+    .right h2 {
+        font-size: 1.8rem;
+    }
+
+    .right p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Dive In Section */
+.diveIn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.diveIn h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.diveIn button {
+    padding: 12px 25px;
+    border-radius: 40px;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: 600;
+    background-color: #c5c2c2;
+    cursor: pointer;
+}
+
+.diveIn p {
+    color: white;
+    font-size: 1.1rem;
+    margin-left: 2px;
+}
+
+.diveIn button:hover {
+    color: white;
+    background-color: #340a6e;
+}
+
+/* GrowSection begings */
+
+.growSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6daf8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.growSection h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.growSection button {
+    padding: 12px 25px;
+    border-radius: 40px;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    border: none;
+    font-weight: 500;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+
+/* FAQ Section */
+
+.faq-section {
+    text-align: center;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #7b2cbf;
+    /* Purple highlight */
+}
+
+.faq-container {
+
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    border: 1px black solid;
+}
+
+.faq-question {
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    border-bottom: 1px solid black;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    color: #7b2cbf;
+}
+
+.faq-answer {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+    display: none;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-section .right {
+    width: fit-content;
+    padding-top: 20px;
+}
+
+/* Footer section */
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 7px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-size: 1rem;
+}
+
+.footer-bottom span {
+    color: red;
+}
